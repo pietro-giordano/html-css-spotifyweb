@@ -9,7 +9,7 @@ box-sizing: border-box;
 :root {
       --color-white: white;
       --color-lightgrey: #a3a3a3;
-      --color-grey: #545454;
+      --color-grey: #7e7e7e;
       --background-black: black;
       --background-darkblue: #141922;
 }
@@ -57,13 +57,13 @@ body {
 
 /* MAIN  */
 main {
-      width: 100%;
+      /* width: 100%; */
       height: calc(100vh - 100px);
 }
 
 /* ASIDE */
 aside {
-      width: 15%;
+      width: 280px;
       max-height: calc(100vh - 100px);
       min-height: 300px;
 }
@@ -82,14 +82,14 @@ aside {
 
 /* CATALOG */
 #catalog {
-      width: 85%;
+      width: calc(100% - 280px);
       overflow: auto;
       position: relative;
 }
 
 #catalog header {
       height: 100px;
-      width: 85%;
+      width: calc(100% - 280px);
       position: fixed;
       top: 0;
       right: 0;
@@ -104,29 +104,124 @@ footer {
       bottom: 0;
       left: 0;
       z-index: 30;
+      background-color: #282828;
 }
 
-footer .side {
-      width: 20%;
+.side {
       height: 100%;
+      padding: 5px;
 }
 
-footer .side img {
+.side-left {
+      width: 300px;
+}
+
+.side-right {
+      width: 300px;
+}
+
+.side img {
       width: 50px;
 }
 
-.side .icons button {
-      color: var(--color-grey);
+.side .icons {
+      padding: 5px;
+}
+
+.side .icons button,
+.center .player button {
       border: none;
       font-size: 1rem;
       cursor: pointer;
+      background-color: #282828;
 }
 
-footer .center {
-      width: 33%;
+.side .icons button {
+      padding: 5px;
+}
+
+.center .player button {
+      padding: 10px;
+}
+
+.side-left .icons button {
+      color: var(--color-grey);
+}
+
+.side-right .icons button,
+.center .player button {
+      color: var(--color-white);
+}
+
+.center {
+      width: 40%;
       height: 100%;
 }
 
+.center .player .play {
+      font-size: 2rem;
+      padding: 8px 20px;
+}
+
+.center span {
+      color: var(--color-white);
+      font-size: 0.8rem;
+}
+
+.center span:first-child {
+      padding: 0 15px 0 5px;
+}
+
+.center span:last-child {
+      padding: 0 5px 0 15px;
+}
+
+.progress-bar {
+      height: 5px;
+      border-radius: 5px;
+}
+
+.progress-bar.empty {
+      background-color: var(--color-grey);
+}
+
+.center .progress-bar.empty {
+      width: 100%;
+}
+
+.side-right .progress-bar.empty {
+      width: 180px;
+}
+
+.progress-bar.step { 
+      background-color: var(--color-lightgrey);
+      justify-content: flex-end;
+}
+
+.center .progress-bar.step {
+      width: 25%;
+}
+
+.side-right .progress-bar.step {
+      width: 50px;
+}
+
+.circle-bar {
+      height: 15px;
+      width: 15px;
+      border-radius: 50%;
+      background-color: var(--color-white);
+      display: none;
+}
+
+.progress-bar.step:hover {
+      background-color: limegreen;
+      cursor: pointer;
+}
+
+.progress-bar.step:hover .circle-bar {
+      display: inline-block;
+}
 
 
 /* DEBUG  */
