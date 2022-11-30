@@ -1,0 +1,48 @@
+/* RESET  */
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+/* REGOLE GENERALI  */
+:root {
+      --color-text1: white;
+      --color-text2: #636363;
+      --background-color1: black;
+      --background-color2: #141922;
+}
+
+body {
+      font-family: 'Montserrat', sans-serif;
+}
+
+.flex {
+      display: flex;
+}
+
+.spacebetween {
+      justify-content: space-between;
+}
+
+.justifycenter {
+      justify-content: center;
+}
+
+/* MAIN  */
+
+/* FOOTER  */
+
+
+/* DEBUG  */
+      .border {
+            border: 2px dashed black;
+      }
+
+      .box {
+            background-color: aquamarine;
+      }
+
+      .box2 {
+            background-color: yellow;
+      }
