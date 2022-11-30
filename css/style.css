@@ -7,10 +7,11 @@ box-sizing: border-box;
 
 /* REGOLE GENERALI  */
 :root {
-      --color-text1: white;
-      --color-text2: #636363;
-      --background-color1: black;
-      --background-color2: #141922;
+      --color-white: white;
+      --color-lightgrey: #a3a3a3;
+      --color-grey: #545454;
+      --background-black: black;
+      --background-darkblue: #141922;
 }
 
 body {
@@ -25,12 +26,16 @@ body {
       flex-direction: column;
 }
 
-.justifybetween {
+.justify-between {
       justify-content: space-between;
 }
 
-.justifycenter {
+.justify-center {
       justify-content: center;
+}
+
+.align-center {
+      align-items: center;
 }
 
 .wrap {
@@ -100,6 +105,29 @@ footer {
       left: 0;
       z-index: 30;
 }
+
+footer .side {
+      width: 20%;
+      height: 100%;
+}
+
+footer .side img {
+      width: 50px;
+}
+
+.side .icons button {
+      color: var(--color-grey);
+      border: none;
+      font-size: 1rem;
+      cursor: pointer;
+}
+
+footer .center {
+      width: 33%;
+      height: 100%;
+}
+
+
 
 /* DEBUG  */
       .border {
