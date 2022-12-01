@@ -62,19 +62,20 @@ ul li {
 /* MAIN  */
 main {
       /* width: 100%; */
-      height: calc(100vh - 100px);
+      height: calc(100vh - 90px);
 }
 
 /* ASIDE */
 aside {
       width: 250px;
-      max-height: calc(100vh - 100px);
-      min-height: 300px;
+      height: calc(100vh - 90px);
+      min-height: 100px;
+      background-color: var(--background-black);
 }
 
 .logo {
       width: 170px;
-      padding: 15px;
+      padding: 10px;
 }
 
 .mini-logo {
@@ -87,30 +88,90 @@ aside li {
 }
 
 aside li img {
-      width: 28px;
+      width: 23px;
       margin: 3px;
 }
 
 aside li span {
       color: var(--color-grey);
+      font-size: 0.7rem;
+      font-weight: bold;
+}
+
+.new-playlist {
+      margin: 5px 15px;
+}
+
+.new-playlist span:first-child {
+      color: var(--color-white);
+      font-weight: bold;
+      font-size: 0.8rem;
+}
+
+.new-playlist span:last-child {
+      color: var(--color-grey);
       font-size: 0.8rem;
       font-weight: bold;
+      vertical-align: middle;
+}
+
+.new-playlist button {
+      background-color: var(--color-grey);
+      width: 30px;
+      height: 30px;
+      font-size: 1.5rem;
+      font-weight: bold;
+      vertical-align: middle;
 }
 
 .playlist {
       overflow: auto;
-      height: 50%;
-      font-size: 0.8rem;
+      /* height: 40vh; */
+      font-size: 0.7rem;
       color: var(--color-grey);
       font-weight: bold;
 }
 
 .playlist li {
-      padding: 8px 15px;
+      padding: 7px 15px;
 }
 
-.boxsotto {
-      height: 50px;
+.profile {
+      margin: 0 10px;
+}
+
+.install {
+      border-bottom: 1px solid var(--color-grey);
+      padding-bottom: 5px;
+}
+
+.install img {
+      width: 15px;
+}
+
+.install span {
+      color: var(--color-grey);
+      padding-left: 10px;
+      font-size: 0.6rem;
+      font-weight: bold;
+}
+
+.user {
+      padding-top: 5px;
+}
+
+.user img {
+      width: 25px;
+      height: 25px;
+      background-color: var(--color-grey);
+      border-radius: 50%;
+}
+
+.user span {
+      color: var(--color-white);
+      padding-left: 10px;
+      font-size: 0.9rem;
+      font-weight: bold;
 }
 
 /* CATALOG */
@@ -131,7 +192,7 @@ aside li span {
 
 /* FOOTER  */
 footer {
-      height: 100px;
+      height: 90px;
       width: 100%;
       position: relative;
       z-index: 30;
