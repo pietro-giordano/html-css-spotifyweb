@@ -222,7 +222,13 @@ nav ul li {
       font-size: 1.3rem;
 }
 
-.subtitle-row {
+.album {
+      color: var(--color-white);
+      font-size: 0.9rem;
+      padding-top: 7px;
+}
+ 
+.subtitle {
       color: var(--color-grey);
       font-size: 0.7rem;
       padding-top: 5px;
@@ -230,9 +236,12 @@ nav ul li {
 
 .card {
       width: calc((100% / 6) - 10px);
-      background-color: red;
       margin-right: 10px;
       text-align: center;
+}
+
+.img-box {
+      position: relative;
 }
 
 .card img {
@@ -241,6 +250,20 @@ nav ul li {
 
 .row:last-child img {
       border-radius: 50%;
+}
+
+.overlay.play-album {
+      color: var(--color-white);
+      font-size: 3rem;
+      display: none;
+}
+
+.row:last-child .overlay {
+      border-radius: 50%;
+}
+
+.img-box:hover .play-album {
+      display: flex;
 }
 
 /* FOOTER  */
