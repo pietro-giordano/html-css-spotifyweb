@@ -64,7 +64,7 @@ main {
 /* ASIDE */
 aside {
       width: 280px;
-      max-height: calc(100vh - 100px);
+      /* max-height: calc(100vh - 100px); */
       min-height: 300px;
 }
 
@@ -75,9 +75,9 @@ aside {
 
 .boxsotto {
       min-height: 50px;
-      position: sticky;
+      /* position: sticky;
       bottom: 0;
-      z-index: 30;
+      z-index: 30; */
 }
 
 /* CATALOG */
@@ -100,9 +100,7 @@ aside {
 footer {
       height: 100px;
       width: 100%;
-      position: fixed;
-      bottom: 0;
-      left: 0;
+      position: relative;
       z-index: 30;
       background-color: #282828;
 }
@@ -113,15 +111,18 @@ footer {
 }
 
 .side-left {
-      width: 300px;
+      max-width: 300px;
 }
 
 .side-right {
       width: 300px;
 }
 
+/* .side-right .icons {} */
+
 .side img {
       width: 50px;
+      margin: 10px;
 }
 
 .side .icons {
@@ -140,12 +141,20 @@ footer {
       padding: 5px;
 }
 
-.center .player button {
-      padding: 10px;
-}
-
 .side-left .icons button {
       color: var(--color-grey);
+}
+
+.side-left .artist {
+      color: var(--color-white);
+      font-weight: 700;
+      font-size: 0.8rem;
+}
+
+.side-left .song {
+      color: var(--color-grey);
+      font-weight: 700;
+      font-size: 0.7rem;
 }
 
 .side-right .icons button,
@@ -158,9 +167,13 @@ footer {
       height: 100%;
 }
 
+.center .player button {
+      padding: 10px;
+}
+
 .center .player .play {
       font-size: 2rem;
-      padding: 8px 20px;
+      padding: 10px 20px;
 }
 
 .center span {
@@ -223,6 +236,23 @@ footer {
       display: inline-block;
 }
 
+
+
+
+/* FROM DESKTOP TO 1100 */
+@media screen and (max-width: 1100px) {
+      
+}
+
+/* FROM 1100 TO 700 */
+@media screen and (max-width: 700px) {
+
+}
+
+/* FROM 700 TO 600 */
+@media screen and (max-width: 600px) {
+
+}
 
 /* DEBUG  */
       .border {
