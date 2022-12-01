@@ -98,8 +98,8 @@ aside li span {
 }
 
 .playlist {
-      overflow-y: auto;
-      overflow-x: hidden;
+      overflow: auto;
+      height: 50%;
       font-size: 0.8rem;
       color: var(--color-grey);
       font-weight: bold;
@@ -110,7 +110,7 @@ aside li span {
 }
 
 .boxsotto {
-      min-height: 50px;
+      height: 50px;
 }
 
 /* CATALOG */
