@@ -11,11 +11,12 @@ box-sizing: border-box;
       --color-lightgrey: #a3a3a3;
       --color-grey: #7e7e7e;
       --background-black: black;
-      --background-darkblue: #141922;
+      --background-darkblue: rgb(33, 44, 61);
 }
 
 body {
       font-family: 'Montserrat', sans-serif;
+      font-weight: bold;
 }
 
 .flex {
@@ -69,8 +70,9 @@ main {
 aside {
       width: 250px;
       height: calc(100vh - 90px);
-      min-height: 100px;
+      /* min-height: 300px; */
       background-color: var(--background-black);
+      overflow: hidden;
 }
 
 .logo {
@@ -95,7 +97,6 @@ aside li img {
 aside li span {
       color: var(--color-grey);
       font-size: 0.7rem;
-      font-weight: bold;
 }
 
 .new-playlist {
@@ -104,14 +105,12 @@ aside li span {
 
 .new-playlist span:first-child {
       color: var(--color-white);
-      font-weight: bold;
       font-size: 0.8rem;
 }
 
 .new-playlist span:last-child {
       color: var(--color-grey);
       font-size: 0.8rem;
-      font-weight: bold;
       vertical-align: middle;
 }
 
@@ -120,16 +119,14 @@ aside li span {
       width: 30px;
       height: 30px;
       font-size: 1.5rem;
-      font-weight: bold;
       vertical-align: middle;
 }
 
 .playlist {
       overflow: auto;
-      /* height: 40vh; */
+      /* min-height: 600px; */
       font-size: 0.7rem;
       color: var(--color-grey);
-      font-weight: bold;
 }
 
 .playlist li {
@@ -153,7 +150,6 @@ aside li span {
       color: var(--color-grey);
       padding-left: 10px;
       font-size: 0.6rem;
-      font-weight: bold;
 }
 
 .user {
@@ -171,7 +167,6 @@ aside li span {
       color: var(--color-white);
       padding-left: 10px;
       font-size: 0.9rem;
-      font-weight: bold;
 }
 
 /* CATALOG */
@@ -179,15 +174,73 @@ aside li span {
       width: calc(100% - 250px);
       overflow: auto;
       position: relative;
+      background-color: var(--background-darkblue);
 }
 
 #catalog .cta {
-      height: 100px;
+      height: 80px;
       width: calc(100% - 250px);
       position: fixed;
       top: 0;
       right: 0;
       z-index: 20;
+      text-align: right;
+}
+
+.cta button {
+      color: var(--color-white);
+      border-color: var(--color-white);
+      background-color:rgba(0, 0, 0, 0);
+      padding: 10px 30px;
+      border-radius: 18px;
+      font-size: 0.7rem;
+      margin: 20px;
+}
+
+nav {
+      padding-top: 80px;
+      text-align: center;
+}
+
+nav ul li {
+      display: inline-block;
+      font-size: 0.8rem;
+      padding: 10px 10px 0;
+      color: var(--color-grey);
+}
+
+.row {
+      margin: 10px;
+}
+
+.info-row {
+      margin: 15px 0;
+}
+
+.title-row {
+      color: var(--color-white);
+      font-size: 1.3rem;
+}
+
+.subtitle-row {
+      color: var(--color-grey);
+      font-size: 0.7rem;
+      padding-top: 5px;
+}
+
+.card {
+      width: calc((100% / 6) - 10px);
+      background-color: red;
+      margin-right: 10px;
+      text-align: center;
+}
+
+.card img {
+      width: 100%;
+}
+
+.row:last-child img {
+      border-radius: 50%;
 }
 
 /* FOOTER  */
@@ -240,13 +293,11 @@ footer {
 
 .side-left .artist {
       color: var(--color-white);
-      font-weight: 700;
       font-size: 0.8rem;
 }
 
 .side-left .song {
       color: var(--color-grey);
-      font-weight: 700;
       font-size: 0.7rem;
 }
 
@@ -349,7 +400,7 @@ footer {
 
 /* DEBUG  */
       .border {
-            border: 2px dashed black;
+            border: 2px dashed yellow;
       }
 
       .box {
