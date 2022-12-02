@@ -119,19 +119,23 @@ aside nav ul li:hover a span {
       color: var(--color-white);
 }
 
-aside nav ul li:first-child a span {
+aside nav ul .special-li {
+      box-shadow: inset 3px 0px 0px 0px #25FF18;
+}
+
+aside nav ul .special-li a span {
       color: var(--color-lightgrey);
 }
 
-aside nav ul li:first-child:hover a span {
+aside nav ul .special-li:hover a span {
       color: var(--color-white);
 }
 
-aside nav ul li:first-child a img {
+aside nav ul .special-li a img {
       filter: brightness(0) saturate(100%) invert(86%) sepia(0%) saturate(1%) hue-rotate(360deg) brightness(92%) contrast(90%);
 }
 
-aside nav ul li:first-child:hover a img {
+aside nav ul .special-li:hover a img {
       filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(822%) hue-rotate(318deg) brightness(109%) contrast(101%);
 }
 
@@ -266,10 +270,7 @@ aside nav ul li:first-child:hover a img {
 }
 
 .cta button:hover {
-      padding: 12px 32px;
-      border-radius: 22px;
-      font-size: 0.8rem;
-      margin: 17px;
+      transform: scale(1.1);
       cursor: pointer;
 }
 
@@ -281,7 +282,21 @@ aside nav ul li:first-child:hover a img {
 #catalog nav ul li {
       display: inline-block;
       font-size: 0.8rem;
-      padding: 10px 10px 0;
+      padding: 10px 10px 5px;
+}
+
+#catalog nav ul li:first-child {
+      position: relative;
+}
+
+#catalog nav ul li:first-child::after {
+      content: "";
+      background-color: #25FF18;
+      position: absolute;
+      bottom: 0;
+      left: calc(50% - 16px);
+      height: 2px;
+      width: 32px;
 }
 
 #catalog nav ul li a {
@@ -403,14 +418,24 @@ footer {
       color: var(--color-grey);
 }
 
+.side-left .icons button:hover {
+      color: var(--color-white);
+}
+
 .side-left .artist {
       color: var(--color-white);
       font-size: 0.8rem;
+      text-decoration: none;
 }
 
 .side-left .song {
       color: var(--color-grey);
       font-size: 0.7rem;
+      text-decoration: none;
+}
+
+.side-left .song:hover {
+      color: var(--color-white);
 }
 
 .side-right .icons button,
@@ -429,6 +454,11 @@ footer {
 .center .player .play {
       font-size: 2rem;
       padding: 10px 20px;
+}
+
+.center .player .play:hover {
+      transform: scale(1.2);
+      background-color: rgba(0, 0, 0, 0);
 }
 
 .center span {
@@ -491,9 +521,6 @@ footer {
       display: inline-block;
 }
 
-
-
-
 /* FROM DESKTOP TO 1100 */
 @media screen and (max-width: 1100px) {
       
@@ -554,7 +581,7 @@ footer {
       }
 }
 
-/* DEBUG  */
+/* DEBUG 
       .border {
             border: 2px dashed yellow;
       }
@@ -578,4 +605,4 @@ footer {
       .square {
             background-color: blue;
             height: 400px;
-      }
+      } */
