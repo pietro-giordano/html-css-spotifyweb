@@ -63,16 +63,19 @@ ul li {
 /* MAIN  */
 main {
       /* width: 100%; */
-      height: calc(100vh - 90px);
+      /* height: calc(100vh - 90px); */
 }
 
 /* ASIDE */
 aside {
       width: 250px;
       height: calc(100vh - 90px);
-      /* min-height: 300px; */
       background-color: var(--background-black);
       overflow: hidden;
+}
+
+aside nav {
+      min-height: 300px;
 }
 
 .logo {
@@ -81,20 +84,26 @@ aside {
 }
 
 .mini-logo {
-      width: 40px;
+      width: 35px;
       display: none;
+      padding: 10px 0 0 10px;
 }
 
-aside li {
-      padding: 0 10px;
+aside nav ul li {
+      padding-left: 10px;
 }
 
-aside li img {
+aside nav ul li a {
+      text-decoration: none;
+      cursor: pointer;
+}
+
+aside nav ul li a img {
       width: 23px;
       margin: 3px;
 }
 
-aside li span {
+aside nav ul li a span {
       color: var(--color-grey);
       font-size: 0.7rem;
 }
@@ -123,10 +132,15 @@ aside li span {
 }
 
 .playlist {
-      overflow: auto;
-      /* min-height: 600px; */
+      /* height: 100px; */
       font-size: 0.7rem;
       color: var(--color-grey);
+      overflow: auto;
+      height: 100%;
+}
+
+.playlist ul {
+      
 }
 
 .playlist li {
@@ -135,6 +149,7 @@ aside li span {
 
 .profile {
       margin: 0 10px;
+      background-color: black;
 }
 
 .install {
@@ -153,7 +168,7 @@ aside li span {
 }
 
 .user {
-      padding-top: 5px;
+      padding: 5px 0;
 }
 
 .user img {
@@ -171,6 +186,7 @@ aside li span {
 
 /* CATALOG */
 #catalog {
+      height: calc(100vh - 90px);
       width: calc(100% - 250px);
       overflow: auto;
       position: relative;
@@ -197,12 +213,12 @@ aside li span {
       margin: 20px;
 }
 
-nav {
+#catalog nav {
       padding-top: 80px;
       text-align: center;
 }
 
-nav ul li {
+#catalog nav ul li {
       display: inline-block;
       font-size: 0.8rem;
       padding: 10px 10px 0;
@@ -419,6 +435,35 @@ footer {
 /* FROM 700 TO 600 */
 @media screen and (max-width: 600px) {
 
+      aside {
+            width: 40px;
+      }
+
+      aside nav .logo,
+      aside nav ul li a span,
+      aside .new-playlist,
+      aside .playlist,
+      aside .profile .install span,
+      aside .profile .user span {
+            display: none;
+      }
+
+      aside .profile .install {
+            border: none;
+      }
+
+      aside .profile .user img {
+            width: 20px;
+            height: 20px;
+      }
+
+      aside nav .mini-logo {
+            display: inline-block;
+      }
+      
+      aside nav ul li a img {
+            margin: 0;
+      }
 }
 
 /* DEBUG  */
