@@ -8,7 +8,7 @@ box-sizing: border-box;
 /* REGOLE GENERALI  */
 :root {
       --color-white: white;
-      --color-lightgrey: #a3a3a3;
+      --color-lightgrey: #c1c1c1;
       --color-grey: #7e7e7e;
       --background-black: black;
       --background-darkblue: rgb(33, 44, 61);
@@ -61,10 +61,6 @@ ul li {
 }
 
 /* MAIN  */
-main {
-      /* width: 100%; */
-      /* height: calc(100vh - 90px); */
-}
 
 /* ASIDE */
 aside {
@@ -107,11 +103,36 @@ aside nav ul li a {
 aside nav ul li a img {
       width: 23px;
       margin: 3px;
+      filter: brightness(0) saturate(100%) invert(54%) sepia(0%) saturate(8%) hue-rotate(230deg) brightness(92%) contrast(86%);
+}
+
+aside nav ul li:hover a img {
+      filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(822%) hue-rotate(318deg) brightness(109%) contrast(101%);
 }
 
 aside nav ul li a span {
       color: var(--color-grey);
       font-size: 0.7rem;
+}
+
+aside nav ul li:hover a span {
+      color: var(--color-white);
+}
+
+aside nav ul li:first-child a span {
+      color: var(--color-lightgrey);
+}
+
+aside nav ul li:first-child:hover a span {
+      color: var(--color-white);
+}
+
+aside nav ul li:first-child a img {
+      filter: brightness(0) saturate(100%) invert(86%) sepia(0%) saturate(1%) hue-rotate(360deg) brightness(92%) contrast(90%);
+}
+
+aside nav ul li:first-child:hover a img {
+      filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(822%) hue-rotate(318deg) brightness(109%) contrast(101%);
 }
 
 .new-playlist {
@@ -130,11 +151,21 @@ aside nav ul li a span {
 }
 
 .new-playlist button {
-      background-color: var(--color-grey);
+      background-color: var(--color-lightgrey);
       width: 30px;
       height: 30px;
       font-size: 1.5rem;
       vertical-align: middle;
+}
+
+.new-playlist div:hover button {
+      background-color: var(--color-white);
+      cursor: pointer;
+}
+
+.new-playlist div:hover span {
+      color: var(--color-white);
+      cursor: pointer;
 }
 
 .playlist {
@@ -152,6 +183,11 @@ aside nav ul li a span {
       color: var(--color-grey);
 }
 
+.playlist li a:hover {
+      text-decoration: none;
+      color: var(--color-white);
+}
+
 .profile {
       margin: 0 10px;
       background-color: black;
@@ -160,16 +196,26 @@ aside nav ul li a span {
 .install {
       border-bottom: 1px solid var(--color-grey);
       padding-bottom: 5px;
+      text-decoration: none;
 }
 
 .install img {
       width: 15px;
+      filter: brightness(0) saturate(100%) invert(54%) sepia(0%) saturate(8%) hue-rotate(230deg) brightness(92%) contrast(86%);
+}
+
+.install:hover img {
+      filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(822%) hue-rotate(318deg) brightness(109%) contrast(101%);
 }
 
 .install span {
       color: var(--color-grey);
       padding-left: 10px;
       font-size: 0.6rem;
+}
+
+.install:hover span {
+      color: var(--color-white);
 }
 
 .user {
@@ -216,6 +262,15 @@ aside nav ul li a span {
       border-radius: 18px;
       font-size: 0.7rem;
       margin: 20px;
+      font-weight: bold;
+}
+
+.cta button:hover {
+      padding: 12px 32px;
+      border-radius: 22px;
+      font-size: 0.8rem;
+      margin: 17px;
+      cursor: pointer;
 }
 
 #catalog nav {
