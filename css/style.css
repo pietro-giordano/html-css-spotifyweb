@@ -76,6 +76,12 @@ aside {
 
 aside nav {
       min-height: 300px;
+      overflow: hidden;
+      height: calc(100% - 60px);
+}
+
+aside nav > div:last-child {
+      overflow: hidden;
 }
 
 .logo {
