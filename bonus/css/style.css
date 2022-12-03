@@ -1,0 +1,651 @@
+/* RESET  */
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+/* REGOLE GENERALI  */
+:root {
+      --color-white: white;
+      --color-lightgrey: #c1c1c1;
+      --color-grey: #7e7e7e;
+      --background-black: black;
+      --background-darkblue: rgb(33, 44, 61);
+}
+
+body {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: bold;
+}
+
+.flex {
+      display: flex;
+}
+
+.column {
+      flex-direction: column;
+}
+
+.justify-between {
+      justify-content: space-between;
+}
+
+.justify-center {
+      justify-content: center;
+}
+
+.align-center {
+      align-items: center;
+}
+
+.wrap {
+      flex-wrap: wrap;
+}
+
+.grow {
+      flex-grow: 1;
+}
+
+.overlay {
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      position: absolute;
+      top: 0;
+      left: 0;
+}
+
+ul li {
+      list-style: none;
+}
+
+/* MAIN  */
+
+/* ASIDE */
+aside {
+      width: 220px;
+      height: calc(100vh - 90px);
+      background-color: var(--background-black);
+      overflow: hidden;
+}
+
+aside nav {
+      min-height: 300px;
+      overflow: hidden;
+      height: calc(100% - 60px);
+}
+
+aside nav > div:last-child {
+      overflow: hidden;
+}
+
+.logo {
+      width: 170px;
+      padding: 10px;
+}
+
+.mini-logo {
+      width: 35px;
+      display: none;
+      padding: 10px 0 0 10px;
+}
+
+aside nav ul li {
+      padding-left: 10px;
+}
+
+aside nav ul li a {
+      text-decoration: none;
+      cursor: pointer;
+}
+
+aside nav ul li a img {
+      width: 23px;
+      margin: 3px;
+      filter: brightness(0) saturate(100%) invert(54%) sepia(0%) saturate(8%) hue-rotate(230deg) brightness(92%) contrast(86%);
+}
+
+aside nav ul li:hover a img {
+      filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(822%) hue-rotate(318deg) brightness(109%) contrast(101%);
+}
+
+aside nav ul li a span {
+      color: var(--color-grey);
+      font-size: 0.7rem;
+}
+
+aside nav ul li:hover a span {
+      color: var(--color-white);
+}
+
+aside nav ul .special-li {
+      box-shadow: inset 3px 0px 0px 0px #25FF18;
+}
+
+aside nav ul .special-li a span {
+      color: var(--color-lightgrey);
+}
+
+aside nav ul .special-li:hover a span {
+      color: var(--color-white);
+}
+
+aside nav ul .special-li a img {
+      filter: brightness(0) saturate(100%) invert(86%) sepia(0%) saturate(1%) hue-rotate(360deg) brightness(92%) contrast(90%);
+}
+
+aside nav ul .special-li:hover a img {
+      filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(822%) hue-rotate(318deg) brightness(109%) contrast(101%);
+}
+
+.new-playlist {
+      margin: 5px 15px;
+}
+
+.new-playlist span:first-child {
+      color: var(--color-white);
+      font-size: 0.8rem;
+}
+
+.new-playlist span:last-child {
+      color: var(--color-grey);
+      font-size: 0.8rem;
+      vertical-align: middle;
+}
+
+.new-playlist button {
+      background-color: var(--color-lightgrey);
+      width: 30px;
+      height: 30px;
+      font-size: 1.5rem;
+      vertical-align: middle;
+}
+
+.new-playlist div:hover button {
+      background-color: var(--color-white);
+      cursor: pointer;
+}
+
+.new-playlist div:hover span {
+      color: var(--color-white);
+      cursor: pointer;
+}
+
+.playlist {
+      font-size: 0.7rem;
+      overflow: auto;
+      height: 100%;
+}
+
+.playlist li {
+      padding: 7px 15px;
+}
+
+.playlist li a {
+      text-decoration: none;
+      color: var(--color-grey);
+}
+
+.playlist li a:hover {
+      text-decoration: none;
+      color: var(--color-white);
+}
+
+.profile {
+      margin: 0 10px;
+      background-color: black;
+}
+
+.install {
+      border-bottom: 1px solid var(--color-grey);
+      padding-bottom: 5px;
+      text-decoration: none;
+}
+
+.install img {
+      width: 15px;
+      filter: brightness(0) saturate(100%) invert(54%) sepia(0%) saturate(8%) hue-rotate(230deg) brightness(92%) contrast(86%);
+}
+
+.install:hover img {
+      filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(822%) hue-rotate(318deg) brightness(109%) contrast(101%);
+}
+
+.install span {
+      color: var(--color-grey);
+      padding-left: 10px;
+      font-size: 0.6rem;
+}
+
+.install:hover span {
+      color: var(--color-white);
+}
+
+.user {
+      padding: 5px 0;
+}
+
+.user img {
+      width: 25px;
+      height: 25px;
+      background-color: var(--color-grey);
+      border-radius: 50%;
+}
+
+.user span {
+      color: var(--color-white);
+      padding-left: 10px;
+      font-size: 0.9rem;
+}
+
+/* CATALOG */
+#catalog {
+      height: calc(100vh - 90px);
+      width: calc(100% - 220px);
+      overflow: auto;
+      position: relative;
+      background-color: var(--background-darkblue);
+}
+
+#catalog .cta {
+      height: 80px;
+      width: calc(100% - 220px);
+      position: fixed;
+      top: 0;
+      right: 0;
+      z-index: 20;
+      text-align: right;
+}
+
+.cta button {
+      color: var(--color-white);
+      border-color: var(--color-white);
+      background-color:rgba(0, 0, 0, 0);
+      padding: 10px 30px;
+      border-radius: 18px;
+      font-size: 0.7rem;
+      margin: 20px;
+      font-weight: bold;
+}
+
+.cta button:hover {
+      transform: scale(1.1);
+      cursor: pointer;
+}
+
+#catalog nav {
+      padding-top: 80px;
+      text-align: center;
+}
+
+#catalog nav ul li {
+      display: inline-block;
+      font-size: 0.8rem;
+      padding: 10px 10px 5px;
+}
+
+#catalog nav ul li:first-child {
+      position: relative;
+}
+
+#catalog nav ul li:first-child::after {
+      content: "";
+      background-color: #25FF18;
+      position: absolute;
+      bottom: 0;
+      left: calc(50% - 16px);
+      height: 2px;
+      width: 32px;
+}
+
+#catalog nav ul li a {
+      text-decoration: none;
+      color: var(--color-grey);
+      cursor: pointer;
+}
+
+#catalog nav ul li a:hover {
+      color: var(--color-white);
+}
+
+.row {
+      margin: 10px;
+}
+
+.info-row {
+      margin: 15px 0;
+}
+
+.title-row {
+      color: var(--color-white);
+      font-size: 1.3rem;
+}
+
+.album {
+      color: var(--color-white);
+      font-size: 0.9rem;
+      padding-top: 7px;
+}
+ 
+.subtitle {
+      color: var(--color-grey);
+      font-size: 0.7rem;
+      padding-top: 5px;
+}
+
+.card {
+      width: calc((100% / 6) - 10px);
+      margin-right: 10px;
+      text-align: center;
+}
+
+.card:hover {
+      cursor: pointer;
+}
+
+.img-box {
+      position: relative;
+}
+
+.card img {
+      width: 100%;
+}
+
+.row:last-child img {
+      border-radius: 50%;
+}
+
+.overlay.play-album {
+      color: var(--color-white);
+      font-size: 3rem;
+      display: none;
+}
+
+.row:last-child .overlay {
+      border-radius: 50%;
+}
+
+.img-box:hover .play-album {
+      display: flex;
+}
+
+/* FOOTER  */
+footer {
+      height: 90px;
+      width: 100%;
+      position: relative;
+      z-index: 30;
+      background-color: #282828;
+}
+
+.side {
+      height: 100%;
+      padding: 5px;
+}
+
+.side-left {
+      width: 230px;
+}
+
+.side-right {
+      width: 230px;
+      justify-content: flex-end;
+}
+
+.side img {
+      width: 50px;
+      margin: 10px;
+}
+
+.side .icons {
+      padding: 5px;
+}
+
+.side .icons button,
+.center .player button {
+      border: none;
+      cursor: pointer;
+      font-size: 1rem;
+      background-color: #282828;
+}
+
+.side .icons button {
+      padding: 5px;
+}
+
+.side-left .icons button {
+      color: var(--color-grey);
+}
+
+.side-left .icons button:hover {
+      color: var(--color-white);
+}
+
+.side-left .artist {
+      color: var(--color-white);
+      font-size: 0.8rem;
+      text-decoration: none;
+}
+
+.side-left .song {
+      color: var(--color-grey);
+      font-size: 0.7rem;
+      text-decoration: none;
+}
+
+.side-left .song:hover {
+      color: var(--color-white);
+}
+
+.side-right .icons button,
+.center .player button {
+      color: var(--color-white);
+}
+
+.center {
+      width: 40%;
+}
+
+.center .player button {
+      padding: 10px;
+}
+
+.center .player .play {
+      font-size: 2rem;
+      padding: 10px 20px;
+}
+
+.center .player .play:hover {
+      transform: scale(1.2);
+      background-color: rgba(0, 0, 0, 0);
+}
+
+.center span {
+      color: var(--color-white);
+      font-size: 0.8rem;
+}
+
+.center span:first-child {
+      padding: 0 15px 0 5px;
+}
+
+.center span:last-child {
+      padding: 0 5px 0 15px;
+}
+
+.progress-bar {
+      height: 5px;
+      border-radius: 5px;
+}
+
+.progress-bar.empty {
+      background-color: var(--color-grey);
+}
+
+.center .progress-bar.empty {
+      width: 100%;
+}
+
+.side-right .progress-bar.empty {
+      width: 120px;
+}
+
+.progress-bar.step { 
+      background-color: var(--color-lightgrey);
+      justify-content: flex-end;
+}
+
+.center .progress-bar.step {
+      width: 25%;
+}
+
+.side-right .progress-bar.step {
+      width: 30%;
+}
+
+.circle-bar {
+      height: 15px;
+      width: 15px;
+      border-radius: 50%;
+      background-color: var(--color-white);
+      display: none;
+}
+
+.progress-bar.step:hover {
+      background-color: limegreen;
+      cursor: pointer;
+}
+
+.progress-bar.step:hover .circle-bar {
+      display: inline-block;
+}
+
+/* FROM DESKTOP TO 1100 */
+@media screen and (max-width: 1100px) {
+      
+      #catalog .card {
+            width: calc((100% / 4) - 10px); 
+            margin-bottom: 15px;    
+      }
+}
+
+/* FROM 1100 TO 700 */
+@media screen and (max-width: 700px) {
+
+      #catalog .card {
+            width: calc((100% / 2) - 10px);
+            margin-bottom: 15px;
+      }
+
+      .side-right .progress-bar.empty {
+            width: 15vw;
+      }
+}
+
+/* FROM 700 TO 600 */
+@media screen and (max-width: 600px) {
+
+      #catalog {
+            width:calc(100% - 40px);     
+      }
+
+      #catalog .cta {
+            width: calc(100% - 40px);
+      }
+
+      aside {
+            width: 40px;
+      }
+
+      aside nav .logo,
+      aside nav ul li a span,
+      aside .new-playlist,
+      aside .playlist,
+      aside .profile .install span,
+      aside .profile .user span {
+            display: none;
+      }
+
+      aside .profile .install {
+            border: none;
+      }
+
+      aside .profile .user img {
+            width: 20px;
+            height: 20px;
+      }
+
+      aside nav .mini-logo {
+            display: inline-block;
+      }
+      
+      aside nav ul li a img {
+            margin: 0;
+      }
+
+      aside nav ul .special-li {
+            box-shadow: none;
+      }
+
+      .side .icons button,
+      .center .player button {
+            font-size: 2.5vw;
+      }
+
+      .side .icons button {
+            padding: 2px;
+      }
+
+      .center .player button {
+            padding: 6px;
+      }
+
+      .center .player .play {
+            font-size: 2rem;
+            padding: 10px 15px;
+      }
+
+      .center span {
+            font-size: 0.6rem;
+      }
+
+      .side-left .artist {
+            font-size: 0.7rem;
+      }
+
+      .side-left .song {
+            font-size: 0.6rem;
+      }
+
+      .side img {
+            width: 40px;
+            margin: 10px;
+      }
+}
+
+/* DEBUG 
+      .border {
+            border: 2px dashed yellow;
+      }
+
+      .box {
+            background-color: aquamarine;
+      }
+
+      .box2 {
+            background-color: yellow;
+      }
+
+      .box3 {
+            background-color: red;
+      }
+
+      .box4 {
+            background-color: green;
+      }
+
+      .square {
+            background-color: blue;
+            height: 400px;
+      } */
