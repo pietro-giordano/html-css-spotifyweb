@@ -579,6 +579,10 @@ footer {
       aside nav ul li a img {
             margin: 0;
       }
+
+      aside nav ul .special-li {
+            box-shadow: none;
+      }
 }
 
 /* DEBUG 
